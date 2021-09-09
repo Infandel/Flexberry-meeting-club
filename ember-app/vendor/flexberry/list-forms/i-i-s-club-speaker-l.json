@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-club-speaker-e",
+  "editForm": "i-i-s-club-speaker-e",
+  "external": false,
+  "caption": "Спикеры",
+  "name": "IISClubSpeakerL",
+  "className": "SpeakerL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-club-speaker",
+      "modelProjection": "SpeakerL"
+    }
+  ]
+}

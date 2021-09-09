@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Club.Objects</name>
+    </assembly>
+    <members>
+        <member name="T:IIS.Club.Book">
+            <summary>
+            Book.
+            </summary>
+        </member>
+        <member name="P:IIS.Club.Book.Title">
+            <summary>
+            Title.
+            </summary>
+        </member>
+        <member name="P:IIS.Club.Book.Author">
+            <summary>
+            Author.
+            </summary>
+        </member>
+        <member name="P:IIS.Club.Book.PagesCount">
+            <summary>
+            PagesCount.
+            </summary>
+        </member>
+        <member name="P:IIS.Club.Book.URLCover">
+            <summary>
+            URLCover.
+            </summary>
+        </member>
+        <member name="P:IIS.Club.Book.URLDescription">
+            <summary>
+            URLDescription.
+            </summary>
+        </member>
+        <member name="P:IIS.Club.Book.Tags">
+            <summary>
+            Tags.
+            </summary>
+        </member>
+        <member name="P:IIS.Club.Book.AverageCount">
+            <summary>
+            AverageCount.
+            </summary>
+        </member>
+        <member name="T:IIS.Club.Book.Views">
+            <summary>
+            Class views container.
+            </summary>
+        </member>
+        <member name="P:IIS.Club.Book.Views.BookE">
+            <summary>
+            "BookE" view.
+            </summary>
+        </member>
+        <member name="P:IIS.Club.Book.Views.BookL">
+            <summary>
+            "BookL" view.
+            </summary>
+        </member>
+        <member name="T:IIS.Club.Report">
+            <summary>
+            Report.
+            </summary>
+        </member>
+        <member name="P:IIS.Club.Report.ReportDate">
+            <summary>
+            ReportDate.
+            </summary>
+        </member>
+        <member name="P:IIS.Club.Report.BookScore">
+            <summary>
+            BookScore.
+            </summary>
+        </member>
+        <member name="P:IIS.Club.Report.URLPresentation">
+            <summary>
+            URLPresentation.
+            </summary>
+        </member>
+        <member name="P:IIS.Club.Report.URLVideo">
+            <summary>
+            URLVideo.
+            </summary>
+        </member>
+        <member name="P:IIS.Club.Report.Review">
+            <summary>
+            Review.
+            </summary>
+        </member>
+        <member name="P:IIS.Club.Report.Book">
+            <summary>
+            Report.
+            </summary>
+        </member>
+        <member name="P:IIS.Club.Report.Speaker">
+            <summary>
+            Report.
+            </summary>
+        </member>
+        <member name="P:IIS.Club.Report.ClubMeeting">
+            <summary>
+            мастеровая ссылка на шапку IIS.Club.ClubMeeting.
+            </summary>
+        </member>
+        <member name="T:IIS.Club.Report.Views">
+            <summary>
+            Class views container.
+            </summary>
+        </member>
+        <member name="P:IIS.Club.Report.Views.ReportE">
+            <summary>
+            "ReportE" view.
+            </summary>
+        </member>
+        <member name="T:IIS.Club.DetailArrayOfReport">
+            <summary>
+            Detail array of Report.
+            </summary>
+        </member>
+        <member name="M:IIS.Club.DetailArrayOfReport.#ctor(IIS.Club.ClubMeeting)">
+            <summary>
+            Construct detail array.
+            </summary>
+            <summary>
+            Returns object with type Report by index.
+            </summary>
+            <summary>
+            Adds object with type Report.
+            </summary>
+        </member>
+        <member name="T:IIS.Club.Speaker">
+            <summary>
+            Speaker.
+            </summary>
+        </member>
+        <member name="P:IIS.Club.Speaker.FirstName">
+            <summary>
+            FirstName.
+            </summary>
+        </member>
+        <member name="P:IIS.Club.Speaker.LastName">
+            <summary>
+            LastName.
+            </summary>
+        </member>
+        <member name="P:IIS.Club.Speaker.MiddleName">
+            <summary>
+            MiddleName.
+            </summary>
+        </member>
+        <member name="T:IIS.Club.Speaker.Views">
+            <summary>
+            Class views container.
+            </summary>
+        </member>
+        <member name="P:IIS.Club.Speaker.Views.SpeakerE">
+            <summary>
+            "SpeakerE" view.
+            </summary>
+        </member>
+        <member name="P:IIS.Club.Speaker.Views.SpeakerL">
+            <summary>
+            "SpeakerL" view.
+            </summary>
+        </member>
+        <member name="T:IIS.Club.ClubMeeting">
+            <summary>
+            Club meeting.
+            </summary>
+        </member>
+        <member name="P:IIS.Club.ClubMeeting.MeetingDate">
+            <summary>
+            MeetingDate.
+            </summary>
+        </member>
+        <member name="P:IIS.Club.ClubMeeting.Report">
+            <summary>
+            Club meeting.
+            </summary>
+        </member>
+        <member name="T:IIS.Club.ClubMeeting.Views">
+            <summary>
+            Class views container.
+            </summary>
+        </member>
+        <member name="P:IIS.Club.ClubMeeting.Views.ClubMeetingE">
+            <summary>
+            "ClubMeetingE" view.
+            </summary>
+        </member>
+        <member name="P:IIS.Club.ClubMeeting.Views.ClubMeetingL">
+            <summary>
+            "ClubMeetingL" view.
+            </summary>
+        </member>
+    </members>
+</doc>

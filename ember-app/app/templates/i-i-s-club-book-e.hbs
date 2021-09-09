@@ -1,0 +1,97 @@
+<h3 class="ui header">{{t "forms.i-i-s-club-book-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.title
+      class=(if (v-get validationObject "title" "isInvalid") "error")
+      label=(t "forms.i-i-s-club-book-e.title-caption")
+      data-test-i-i-s-club-book-e-title=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "title" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.author
+      class=(if (v-get validationObject "author" "isInvalid") "error")
+      label=(t "forms.i-i-s-club-book-e.author-caption")
+      data-test-i-i-s-club-book-e-author=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "author" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.pagesCount
+      class=(if (v-get validationObject "pagesCount" "isInvalid") "error")
+      label=(t "forms.i-i-s-club-book-e.pagesCount-caption")
+      data-test-i-i-s-club-book-e-pagesCount=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "pagesCount" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.uRLCover
+      class=(if (v-get validationObject "uRLCover" "isInvalid") "error")
+      label=(t "forms.i-i-s-club-book-e.uRLCover-caption")
+      data-test-i-i-s-club-book-e-uRLCover=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "uRLCover" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.uRLDescription
+      class=(if (v-get validationObject "uRLDescription" "isInvalid") "error")
+      label=(t "forms.i-i-s-club-book-e.uRLDescription-caption")
+      data-test-i-i-s-club-book-e-uRLDescription=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "uRLDescription" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.tags
+      class=(if (v-get validationObject "tags" "isInvalid") "error")
+      label=(t "forms.i-i-s-club-book-e.tags-caption")
+      data-test-i-i-s-club-book-e-tags=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "tags" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.averageCount
+      class=(if (v-get validationObject "averageCount" "isInvalid") "error")
+      label=(t "forms.i-i-s-club-book-e.averageCount-caption")
+      data-test-i-i-s-club-book-e-averageCount=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "averageCount" "message")}}
+  </div>
+</form>

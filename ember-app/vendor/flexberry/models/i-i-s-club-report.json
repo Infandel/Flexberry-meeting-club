@@ -1,0 +1,177 @@
+﻿{
+  "name": "IISClubReport",
+  "modelName": "i-i-s-club-report",
+  "className": "Report",
+  "nameSpace": "IIS.Club",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "reportDate",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": true,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "bookScore",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "uRLPresentation",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "uRLVideo",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "review",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "book",
+      "relatedTo": "i-i-s-club-book",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "speaker",
+      "relatedTo": "i-i-s-club-speaker",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "clubMeeting",
+      "relatedTo": "i-i-s-club-club-meeting",
+      "inverse": "report"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ReportE",
+      "modelName": "i-i-s-club-report",
+      "attrs": [
+        {
+          "name": "reportDate",
+          "caption": "Дата доклада",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "bookScore",
+          "caption": "Оценка книги",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "uRLPresentation",
+          "caption": "Ссылка на презентацию",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "uRLVideo",
+          "caption": "Ссылка на видео",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "review",
+          "caption": "Рецензия",
+          "hidden": false,
+          "index": 4
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Title",
+          "lookupValueField": "title",
+          "relationName": "Book",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "title",
+              "caption": "~",
+              "hidden": true,
+              "index": 6
+            }
+          ],
+          "index": 5,
+          "type": "standard",
+          "caption": "Книга",
+          "name": "book",
+          "relatedTo": "i-i-s-club-book",
+          "inverse": null
+        },
+        {
+          "lookupValue": "LastName",
+          "lookupValueField": "lastName",
+          "relationName": "Speaker",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "lastName",
+              "caption": "~",
+              "hidden": true,
+              "index": 8
+            },
+            {
+              "name": "firstName",
+              "caption": "~",
+              "hidden": true,
+              "index": 9
+            },
+            {
+              "name": "middleName",
+              "caption": "~",
+              "hidden": true,
+              "index": 10
+            }
+          ],
+          "index": 7,
+          "type": "standard",
+          "caption": "Спикер",
+          "name": "speaker",
+          "relatedTo": "i-i-s-club-speaker",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,76 @@
+﻿{
+  "name": "IISClubClubMeeting",
+  "modelName": "i-i-s-club-club-meeting",
+  "className": "ClubMeeting",
+  "nameSpace": "IIS.Club",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "meetingDate",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": true,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [
+    {
+      "name": "report",
+      "relatedTo": "i-i-s-club-report",
+      "inverse": "clubMeeting"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ClubMeetingE",
+      "modelName": "i-i-s-club-club-meeting",
+      "attrs": [
+        {
+          "name": "meetingDate",
+          "caption": "Дата встречи",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "ReportE",
+          "caption": "Доклад",
+          "name": "report",
+          "relatedTo": "i-i-s-club-report",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ClubMeetingL",
+      "modelName": "i-i-s-club-club-meeting",
+      "attrs": [
+        {
+          "name": "meetingDate",
+          "caption": "Дата встречи",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "ReportE",
+          "caption": "Доклады",
+          "name": "report",
+          "relatedTo": "i-i-s-club-report",
+          "inverse": null
+        }
+      ]
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

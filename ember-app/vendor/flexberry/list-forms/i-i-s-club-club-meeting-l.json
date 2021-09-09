@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-club-club-meeting-e",
+  "editForm": "i-i-s-club-club-meeting-e",
+  "external": false,
+  "caption": "Встречи клуба",
+  "name": "IISClubClubMeetingL",
+  "className": "ClubMeetingL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-club-club-meeting",
+      "modelProjection": "ClubMeetingL"
+    }
+  ]
+}

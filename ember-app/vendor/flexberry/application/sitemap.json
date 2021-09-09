@@ -1,0 +1,52 @@
+﻿{
+  "applicationCaption": "Книжный клуб",
+  "applicationTitle": "Club app",
+  "items": [
+    {
+      "link": null,
+      "menuName": "встречи-клуба",
+      "caption": "Встречи клуба",
+      "title": "Встречи клуба",
+      "children": [
+        {
+          "link": "i-i-s-club-club-meeting-l",
+          "menuName": null,
+          "caption": "Встречи клуба",
+          "title": "",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "книги",
+      "caption": "Книги",
+      "title": "Книги",
+      "children": [
+        {
+          "link": "i-i-s-club-book-l",
+          "menuName": null,
+          "caption": "Книги",
+          "title": "",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "спикеры",
+      "caption": "Спикеры",
+      "title": "Спикеры",
+      "children": [
+        {
+          "link": "i-i-s-club-speaker-l",
+          "menuName": null,
+          "caption": "Спикеры",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}
