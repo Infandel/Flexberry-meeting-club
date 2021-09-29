@@ -1,3 +1,5 @@
 export default {
-  caption: 'IISClubClubMeetingL'
+  caption: 'Club meetings',
+  expanded: 'Club meetings expanded',
+  back: 'Back'
 };

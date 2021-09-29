@@ -1,5 +1,6 @@
 import ListFormController from 'ember-flexberry/controllers/list-form';
 
+
 export default ListFormController.extend({
   /**
     Name of related edit form route.
@@ -8,5 +9,6 @@ export default ListFormController.extend({
     @type String
     @default 'i-i-s-club-speaker-e'
    */
-  editFormRoute: 'i-i-s-club-speaker-e'
+  editFormRoute: 'i-i-s-club-speaker-e',
+  
 });

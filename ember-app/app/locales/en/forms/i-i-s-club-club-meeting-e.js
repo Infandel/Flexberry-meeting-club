@@ -1,5 +1,5 @@
 export default {
-  caption: 'IISClubClubMeetingE',
+  caption: 'Club meeting',
   'meetingDate-caption': 'meetingDate',
   'report-caption': 'report'
 };

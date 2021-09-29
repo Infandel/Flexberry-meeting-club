@@ -55,3 +55,24 @@
     {{flexberry-validationmessage error=(v-get validationObject "middleName" "message")}}
   </div>
 </form>
+{{#if model.authorReports}}
+  <div style="padding: 30px 0px;">
+    <h3>{{t "models.i-i-s-club-report.projections.ReportE.uRLVideo.multiple"}}</h3>
+  </div>
+{{/if}}
+{{#unless model.isNew}}
+  <div class="field" >
+    <ul style="display: inline-block; list-style-type: none;  margin: 0;  padding: 0;">
+      {{#each model.authorReports as |report|}}
+      <li style=
+        "border-radius: 0.29rem;
+        border: 1px solid rgba(34, 36, 38, 0.15);
+        padding: 5px;
+        margin: 2px;
+        box-shadow: 0px 1px 2px 0 rgb(34 36 38 / 15%)">
+        <a href={{report}}>{{report}}</a>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+{{/unless}}

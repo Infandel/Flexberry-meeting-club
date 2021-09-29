@@ -1,4 +1,10 @@
-<h3 class="ui header">{{t "forms.i-i-s-club-book-e.caption"}}</h3>
+<div style="display:inline-flex; margin: 15px 0px">
+  <h3 class="ui header">{{t "forms.i-i-s-club-book-e.caption"}} 
+  {{#unless model.isNew}}
+    {{model.title}}
+  {{/unless}}
+  </h3>  
+</div>
 
 <form class="ui form flexberry-vertical-form" role="form">
   {{flexberry-error error=error}}
@@ -23,6 +29,23 @@
     <div class="sixteen wide">
       {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
     </div>
+  </div>  
+  {{#if model.uRLCover}}    
+  {{else}}
+  <div class="field flexberry-file-image-preview-wrapper ui segment" >
+    <img class="img flexberry-file-image-preview ui small centered image" src="/assets/images/book-cover.jpg" alt="Фото обложки">  
+  </div>
+  {{/if}}
+  <h5>{{t "forms.i-i-s-club-book-e.uRLCover-caption"}}</h5>
+  <div class="field">
+    {{flexberry-file
+      relatedModel=model
+      showPreview=true
+      value=model.uRLCover
+      showUploadButton=true
+      uploadUrl="http://localhost:6500/api/File"
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "uRLCover" "message")}}
   </div>
   <div class="field">
     {{flexberry-field
@@ -53,17 +76,7 @@
       data-test-i-i-s-club-book-e-pagesCount=true
     }}
     {{flexberry-validationmessage error=(v-get validationObject "pagesCount" "message")}}
-  </div>
-  <div class="field">
-    {{flexberry-field
-      readonly=readonly
-      value=model.uRLCover
-      class=(if (v-get validationObject "uRLCover" "isInvalid") "error")
-      label=(t "forms.i-i-s-club-book-e.uRLCover-caption")
-      data-test-i-i-s-club-book-e-uRLCover=true
-    }}
-    {{flexberry-validationmessage error=(v-get validationObject "uRLCover" "message")}}
-  </div>
+  </div>  
   <div class="field">
     {{flexberry-field
       readonly=readonly
@@ -86,12 +99,34 @@
   </div>
   <div class="field">
     {{flexberry-field
-      readonly=readonly
+      readonly=true
       value=model.averageCount
       class=(if (v-get validationObject "averageCount" "isInvalid") "error")
       label=(t "forms.i-i-s-club-book-e.averageCount-caption")
       data-test-i-i-s-club-book-e-averageCount=true
     }}
     {{flexberry-validationmessage error=(v-get validationObject "averageCount" "message")}}
-  </div>
+  </div>  
 </form>
+
+{{#if model.bookReports}}
+  <div style="padding: 30px 0px;">
+    <h3>{{t "models.i-i-s-club-report.projections.ReportE.uRLVideo.multiple"}}</h3>
+  </div>
+{{/if}}
+{{#unless model.isNew}}
+  <div class="ember-text-field" >
+    <ul style="display: inline-block; list-style-type: none;  margin: 0;  padding: 0;">
+      {{#each model.bookReports as |report|}}
+      <li style=
+        "border-radius: 0.29rem;
+        border: 1px solid rgba(34, 36, 38, 0.15);
+        padding: 5px;
+        margin: 2px;
+        box-shadow: 0px 1px 2px 0 rgb(34 36 38 / 15%)">
+        <a style="color:darkmagenta" href={{report}}>{{report}}</a>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+{{/unless}}

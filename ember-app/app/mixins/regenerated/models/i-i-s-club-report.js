@@ -28,19 +28,26 @@ export let ValidationRules = {
     descriptionKey: 'models.i-i-s-club-report.validations.bookScore.__caption__',
     validators: [
       validator('ds-error'),
-      validator('number', { allowString: true, allowBlank: true, integer: true }),
+      validator('number', { allowString: true, allowBlank: true, integer: true, gt: 0, lte: 5 }),
     ],
   },
   uRLPresentation: {
     descriptionKey: 'models.i-i-s-club-report.validations.uRLPresentation.__caption__',
     validators: [
       validator('ds-error'),
+      validator('format', {
+        type: 'url'
+      })
+
     ],
   },
   uRLVideo: {
     descriptionKey: 'models.i-i-s-club-report.validations.uRLVideo.__caption__',
     validators: [
       validator('ds-error'),
+      validator('format', {
+        type: 'url'
+      })
     ],
   },
   review: {
@@ -80,7 +87,9 @@ export let defineProjections = function (modelClass) {
     uRLVideo: attr('Ссылка на видео', { index: 3 }),
     review: attr('Рецензия', { index: 4 }),
     book: belongsTo('i-i-s-club-book', 'Книга', {
-      title: attr('~', { index: 6, hidden: true })
+      title: attr('~', { index: 6, hidden: true }),
+      averageCount: attr('~', { index: 7, hidden: true })
+
     }, { index: 5, displayMemberPath: 'title' }),
     speaker: belongsTo('i-i-s-club-speaker', 'Спикер', {
       lastName: attr('~', { index: 8, hidden: true }),

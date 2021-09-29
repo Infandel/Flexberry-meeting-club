@@ -21,6 +21,8 @@ Router.map(function () {
   { path: 'i-i-s-club-speaker-e/:id' });
   this.route('i-i-s-club-speaker-e.new',
   { path: 'i-i-s-club-speaker-e/new' });
+  this.route('club-meeting-l',
+  { path: 'club-meeting-l' });
 });
 
 export default Router;

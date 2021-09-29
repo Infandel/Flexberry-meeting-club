@@ -8,5 +8,6 @@ export default ListFormController.extend({
     @type String
     @default 'i-i-s-club-club-meeting-e'
    */
-  editFormRoute: 'i-i-s-club-club-meeting-e'
+  editFormRoute: 'i-i-s-club-club-meeting-e',
+
 });

@@ -53,7 +53,7 @@ namespace IIS.Club
             // Config file upload.
             const string fileControllerPath = "api/File";
             config.MapODataServiceFileRoute("File", fileControllerPath);
-            var fileAccessor = new DefaultDataObjectFileAccessor(new Uri("http://localhost"), fileControllerPath, "Uploads");
+            var fileAccessor = new DefaultDataObjectFileAccessor(new Uri("http://localhost:6500"), fileControllerPath, "~/Uploads");
             container.RegisterInstance<IDataObjectFileAccessor>(fileAccessor);
             
             // Create EDM model builder

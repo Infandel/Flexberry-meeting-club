@@ -1,0 +1,54 @@
+<button class="ui button" onclick="history.back()">
+  {{t "forms.i-i-s-club-club-meeting-l.back"}}
+</button>
+{{#each model.meetingsList as |meetingsList|}} 
+  <div class="ui divided items">
+      <div style="display:flex; justify-content: space-between; padding: 10px 0px; border-top: 1px solid rgba(34, 36, 38, 0.15)">
+        {{t "forms.club-meeting-l.meetingDate"}}
+        {{#link-to "i-i-s-club-club-meeting-e" meetingsList.id}}
+          {{meetingsList.date}}       
+        {{/link-to}}      
+        {{t "forms.club-meeting-l.reportsList"}}
+      </div>
+    {{#each meetingsList.reports as |report|}}
+      <div class="item">
+        <div class="image">
+          <img src="/assets/images/speaker.jpg" alt="Спикер">
+        </div>
+        <div class="content">
+          <span class="ui header right floated">{{report.lastName}} {{report.firstName}}</span>
+          <div class="header">
+            <div class="ui label">{{t "forms.club-meeting-l.speaker"}}:</div>            
+          </div>
+          <div class="meta">
+            <div class="ui label">{{t "forms.club-meeting-l.bookTitle"}}:</div>
+
+            <span class="ui header right floated" >{{report.title}}</span> 
+          </div>                                 
+          <div class="meta">
+            <div class="ui label">{{t "forms.club-meeting-l.bookScore"}}:</div>
+            
+            <span class="ui header right floated" >{{report.bookScore}} {{t "forms.club-meeting-l.outOf5"}}</span>
+          </div>
+          <div class="description">
+            <div class="header">{{t "forms.club-meeting-l.review"}}:</div>
+              {{report.review}}
+          </div>
+          <div class="extra">
+            <div class="header">{{t "forms.club-meeting-l.usefulLinks"}}:</div>
+            <button class="ui button">
+              <a href={{report.uRLPresentation}}>
+                {{t "forms.club-meeting-l.watchReportRecord"}}
+              </a>
+            </button>
+            <button class="ui right floated button">
+              <a href={{report.uRLVideo}}  title={{t "forms.club-meeting-l.DlPresentation"}}>
+                {{t "forms.club-meeting-l.DlPresentation"}}
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+{{/each}}

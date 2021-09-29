@@ -1,5 +1,5 @@
 export default {
-  caption: 'IISClubBookE',
+  caption: 'Book',
   'title-caption': 'title',
   'author-caption': 'author',
   'pagesCount-caption': 'pagesCount',

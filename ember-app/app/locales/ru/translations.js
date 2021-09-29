@@ -6,6 +6,7 @@ import IISClubClubMeetingLForm from './forms/i-i-s-club-club-meeting-l';
 import IISClubSpeakerLForm from './forms/i-i-s-club-speaker-l';
 import IISClubBookEForm from './forms/i-i-s-club-book-e';
 import IISClubClubMeetingEForm from './forms/i-i-s-club-club-meeting-e';
+import ClubMeetingLForm from './forms/club-meeting-l';
 import IISClubSpeakerEForm from './forms/i-i-s-club-speaker-e';
 import IISClubBookModel from './models/i-i-s-club-book';
 import IISClubClubMeetingModel from './models/i-i-s-club-club-meeting';
@@ -121,12 +122,14 @@ $.extend(true, translations, {
       'delete-success-message': 'Объект удален',
       'delete-error-message-caption': 'Ошибка удаления'
     },
+    'club-meeting-l':ClubMeetingLForm,
     'i-i-s-club-book-l': IISClubBookLForm,
     'i-i-s-club-club-meeting-l': IISClubClubMeetingLForm,
     'i-i-s-club-speaker-l': IISClubSpeakerLForm,
     'i-i-s-club-book-e': IISClubBookEForm,
     'i-i-s-club-club-meeting-e': IISClubClubMeetingEForm,
-    'i-i-s-club-speaker-e': IISClubSpeakerEForm
+    'i-i-s-club-speaker-e': IISClubSpeakerEForm,
+    
   },
 
 });

@@ -1,5 +1,10 @@
 {{flexberry-error error=error}}
 <h3>{{t "forms.i-i-s-club-club-meeting-l.caption"}}</h3>
+<div style="margin-bottom: 14px;">
+  {{#link-to "club-meeting-l"}}
+    <button class="ui button">{{t "forms.i-i-s-club-club-meeting-l.expanded"}}</button>
+  {{/link-to}}
+</div>
 <div class="row">
   {{flexberry-objectlistview
     modelName=modelName
@@ -10,6 +15,8 @@
     refreshButton=true
     sorting=computedSorting
     orderable=true
+    filterButton=true
+    filterByAnyWord=true
     sortByColumn=(action "sortByColumn")
     addColumnToSorting=(action "addColumnToSorting")
     beforeDeleteAllRecords=(action "beforeDeleteAllRecords")
@@ -23,6 +30,6 @@
     gotoPage=(action "gotoPage")
     nextPage=(action "nextPage")
     componentName="IISClubClubMeetingL"
-    data-test-olv=true
+    data-test-olv=true    
   }}
 </div>

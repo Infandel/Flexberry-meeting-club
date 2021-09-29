@@ -8,7 +8,7 @@ export let Model = Mixin.create({
   title: DS.attr('string'),
   author: DS.attr('string'),
   pagesCount: DS.attr('number'),
-  uRLCover: DS.attr('string'),
+  uRLCover: DS.attr('file'),
   uRLDescription: DS.attr('string'),
   tags: DS.attr('string'),
   averageCount: DS.attr('decimal')
@@ -56,7 +56,6 @@ export let ValidationRules = {
     descriptionKey: 'models.i-i-s-club-book.validations.averageCount.__caption__',
     validators: [
       validator('ds-error'),
-      validator('number', { allowString: true, allowBlank: true }),
     ],
   },
 };

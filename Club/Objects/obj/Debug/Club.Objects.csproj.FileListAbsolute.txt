@@ -48,3 +48,4 @@ G:\FlexberryWorkspace\CodeGen\Club\Club\Objects\obj\Debug\Club.Objects.csproj.Co
 G:\FlexberryWorkspace\CodeGen\Club\Club\Objects\obj\Debug\Club.Objects.csproj.CopyComplete
 G:\FlexberryWorkspace\CodeGen\Club\Club\Objects\obj\Debug\Club.Objects.dll
 G:\FlexberryWorkspace\CodeGen\Club\Club\Objects\obj\Debug\Club.Objects.pdb
+G:\FlexberryWorkspace\CodeGen\Club\Club\Objects\obj\Debug\Club.Objects.csproj.AssemblyReference.cache

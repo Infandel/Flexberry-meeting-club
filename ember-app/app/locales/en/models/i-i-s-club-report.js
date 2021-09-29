@@ -11,7 +11,8 @@ export default {
         __caption__: 'uRLPresentation'
       },
       uRLVideo: {
-        __caption__: 'uRLVideo'
+        __caption__: 'uRLVideo',
+        multiple: 'Links for videos'
       },
       review: {
         __caption__: 'review'

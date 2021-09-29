@@ -11,7 +11,8 @@ export default {
         __caption__: 'Ссылка на презентацию'
       },
       uRLVideo: {
-        __caption__: 'Ссылка на видео'
+        __caption__: 'Ссылка на видео',
+        multiple: 'Ссылки на видео'
       },
       review: {
         __caption__: 'Рецензия'
@@ -59,7 +60,7 @@ export default {
       __caption__: 'Спикер'
     },
     clubMeeting: {
-      __caption__: 'clubMeeting'
+      __caption__: 'Встреча клуба'
     }
   }
 };

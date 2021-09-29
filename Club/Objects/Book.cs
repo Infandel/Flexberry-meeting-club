@@ -54,7 +54,7 @@ namespace IIS.Club
         
         private int fPagesCount;
         
-        private string fURLCover;
+        private ICSSoft.STORMNET.UserDataTypes.WebFile fURLCover;
         
         private string fURLDescription;
         
@@ -168,15 +168,14 @@ namespace IIS.Club
         // *** Start programmer edit section *** (Book.URLCover CustomAttributes)
 
         // *** End programmer edit section *** (Book.URLCover CustomAttributes)
-        [StrLen(255)]
-        public virtual string URLCover
+        public virtual ICSSoft.STORMNET.UserDataTypes.WebFile URLCover
         {
             get
             {
                 // *** Start programmer edit section *** (Book.URLCover Get start)
 
                 // *** End programmer edit section *** (Book.URLCover Get start)
-                string result = this.fURLCover;
+                ICSSoft.STORMNET.UserDataTypes.WebFile result = this.fURLCover;
                 // *** Start programmer edit section *** (Book.URLCover Get end)
 
                 // *** End programmer edit section *** (Book.URLCover Get end)

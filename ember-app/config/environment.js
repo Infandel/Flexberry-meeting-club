@@ -91,7 +91,7 @@ module.exports = function(environment) {
       // Custom property with components settings.
       components: {
         // Settings for `flexberry-file` component.
-        flexberryFile: {
+        uRLCover: {
           // URL of file upload controller.
           uploadUrl: backendUrl + '/api/File',
 

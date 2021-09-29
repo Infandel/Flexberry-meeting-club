@@ -3,6 +3,7 @@ import EmberFlexberryDataModel from 'ember-flexberry-data/models/model';
 import OfflineModelMixin from 'ember-flexberry-data/mixins/offline-model';
 import { computed } from '@ember/object';
 
+
 import {
   defineProjections,
   ValidationRules,

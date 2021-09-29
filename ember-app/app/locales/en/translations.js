@@ -7,6 +7,7 @@ import IISClubSpeakerLForm from './forms/i-i-s-club-speaker-l';
 import IISClubBookEForm from './forms/i-i-s-club-book-e';
 import IISClubClubMeetingEForm from './forms/i-i-s-club-club-meeting-e';
 import IISClubSpeakerEForm from './forms/i-i-s-club-speaker-e';
+import ClubMeetingLForm from './forms/club-meeting-l';
 import IISClubBookModel from './models/i-i-s-club-book';
 import IISClubClubMeetingModel from './models/i-i-s-club-club-meeting';
 import IISClubReportModel from './models/i-i-s-club-report';
@@ -23,7 +24,7 @@ $.extend(true, translations, {
     'i-i-s-club-speaker': IISClubSpeakerModel
   },
 
-  'application-name': 'Application caption',
+  'application-name': 'Book club',
 
   forms: {
     loading: {
@@ -62,7 +63,7 @@ $.extend(true, translations, {
       },
 
       footer: {
-        'application-name': 'Application caption',
+        'application-name': 'Book club',
         'application-version': {
           caption: 'Addon version {{version}}',
           title: 'It is version of ember-flexberry addon, which uses in this dummy application ' +
@@ -73,8 +74,8 @@ $.extend(true, translations, {
 
       sitemap: {
         'application-name': {
-          caption: 'Application caption',
-          title: 'Application title'
+          caption: 'Book club',
+          title: 'Club app'
         },
         'application-version': {
           caption: 'Addon version {{version}}',
@@ -87,27 +88,27 @@ $.extend(true, translations, {
           title: ''
         },
         'встречи-клуба': {
-          caption: 'встречи-клуба',
+          caption: 'Club meetings',
           title: 'встречи-клуба',
           'i-i-s-club-club-meeting-l': {
-            caption: 'i-i-s-club-club-meeting-l',
-            title: 'i-i-s-club-club-meeting-l'
+            caption: 'Club meetings',
+            title: 'Club meetings'
           }
         },
         книги: {
-          caption: 'книги',
-          title: 'книги',
+          caption: 'Books',
+          title: 'Books',
           'i-i-s-club-book-l': {
-            caption: 'i-i-s-club-book-l',
-            title: 'i-i-s-club-book-l'
+            caption: 'Books',
+            title: 'Books'
           }
         },
         спикеры: {
-          caption: 'спикеры',
-          title: 'спикеры',
+          caption: 'Speakers',
+          title: 'Speakers',
           'i-i-s-club-speaker-l': {
-            caption: 'i-i-s-club-speaker-l',
-            title: 'i-i-s-club-speaker-l'
+            caption: 'Speakers',
+            title: 'Speakers'
           }
         }
       }
@@ -121,6 +122,7 @@ $.extend(true, translations, {
       'delete-success-message': 'Object deleted',
       'delete-error-message-caption': 'Delete operation failed'
     },
+    'club-meeting-l':ClubMeetingLForm,
     'i-i-s-club-book-l': IISClubBookLForm,
     'i-i-s-club-club-meeting-l': IISClubClubMeetingLForm,
     'i-i-s-club-speaker-l': IISClubSpeakerLForm,

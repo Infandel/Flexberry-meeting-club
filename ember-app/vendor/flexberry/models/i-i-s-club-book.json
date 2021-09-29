@@ -35,8 +35,8 @@
     },
     {
       "name": "uRLCover",
-      "type": "string",
-      "flexberryType": "string",
+      "type": "file",
+      "flexberryType": "WebFile",
       "notNull": false,
       "defaultValue": "",
       "stored": true,
